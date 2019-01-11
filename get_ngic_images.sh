@@ -17,6 +17,6 @@ docker network connect brs11 cp
 docker network connect brspgw cp
 
 docker run -t -d --name dp -v $(pwd)/config:/opt/ngic/config woojoong/kone-dp:latest bash
-docker network connect brsgi dp
 docker network connect brs1u dp
+docker network connect brsgi dp
 docker network connect brspgw dp
