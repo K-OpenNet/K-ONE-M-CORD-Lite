@@ -16,7 +16,7 @@ docker run -t -d --name cp -v $(pwd)/config:/opt/ngic/config woojoong/kone-cp:la
 docker network connect brs11 cp
 docker network connect brspgw cp
 
-docker run -t -d --name dp -v $(pwd)/config:/opt/ngic/config woojoong/kone-dp:latest bash
+docker run -t -d --name dp --cap-add IPC_LOCK --cap-add NET_ADMIN -v $(pwd)/config:/opt/ngic/config woojoong/kone-dp:latest bash
 docker network connect brs1u dp
 docker network connect brsgi dp
 docker network connect brspgw dp
