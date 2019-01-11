@@ -1,0 +1,12 @@
+#! /usr/bin/env bash
+
+echo "Set environment for K-ONE M-CORD Lite version"
+
+echo "Start to install prerequisites"
+sudo apt update
+sudo apt-get install python -y
+sudo apt-get install python-pip -y
+pip install requests
+sudo apt install -y docker.io
+sudo systemctl start docker
+sudo systemctl enable docker

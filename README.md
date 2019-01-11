@@ -1,2 +1,4 @@
-# K-ONE-M-CORD-Lite
+# ONF M-CORD lite version for K-ONE project (K-ONE-M-CORD-Lite)
 M-CORD lite version for K-ONE project
+
+
