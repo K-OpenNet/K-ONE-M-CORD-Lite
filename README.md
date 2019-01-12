@@ -1,5 +1,10 @@
 # ONF M-CORD lite version for K-ONE project (K-ONE-M-CORD-Lite)
 M-CORD lite version for K-ONE project
+Note that
+* containers and SPGW-C/U software have been implemented by Intel
+* shell scripts are implemented by Woojoong Kim @ POSTECH and ONF
+
+
 ## Specification
 * OS: Ubuntu 16.04 (Fin to test) and 18.04 (under test)
 * CPU: Intel CPU (More than Haswell CPU microarchitecture), at least 20 cores
