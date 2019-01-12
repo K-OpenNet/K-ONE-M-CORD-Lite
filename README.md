@@ -1,5 +1,32 @@
 # ONF M-CORD lite version for K-ONE project (K-ONE-M-CORD-Lite)
 M-CORD lite version for K-ONE project
+## Specification
+* OS: Ubuntu 16.04 (Fin to test) and 18.04 (under test)
+* CPU: Intel CPU (More than Haswell CPU microarchitecture), at least 20 cores
+* Memory: 16GB
+* Disk: > 1GB
+
+## Set-up environment
+### Single PM version (Release 1)
+0. (Optional) Make a disk storage when using CloudLab
+```
+PM$ ./cloudlab-disk-setup.sh
+```
+
+1. Install Docker and other requisites
+```
+PM$ ./set_env.sh
+```
+
+2. Pull/run SPGW-C and SGPW-U images and make bridge networks
+```
+PM$ ./get_ngic_images.sh
+```
+
+3. Pull traffic generator image
+```
+PM$ ./get_traffic_images.sh
+```
 
 ## Configuration
 ### config/interface.cfg
@@ -64,5 +91,5 @@ root# tcpreplay --pps=2000 -i $SGI_IFACE tosend-sgi.pcap # to generate SGI traff
 
 ## Release information
 * Release 1 - single PM version
-* Release 2 - multiple PM version by using Docker Swarm (Under maintenance by Woojoong Kim @ POSTECH and ONF)
+* Release 2 - multi-PM version by using Docker Swarm (Under maintenance by Woojoong Kim @ POSTECH and ONF)
 
