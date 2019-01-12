@@ -28,22 +28,49 @@ PM$ ./get_ngic_images.sh
 PM$ ./get_traffic_images.sh
 ```
 
+## Information
+### Network information
+* brspgw: 192.168.104.0/24
+* brs11: 192.168.103.0/24
+* brs1u: 192.168.105.0/24
+* brsgi: 192.168.106.0/24
+
+### How to access each container?
+* DP container
+```
+PM$ docker exec -it dp bash
+```
+
+* CP container
+```
+PM$ docker exec -it cp bash
+```
+
+* Traffic generator container
+```
+PM$ docker exec -it traffic bash
+```
+
+### How to get IP address for each interface in each container?
+1. Access each container
+2. Input `ifconfig` command
+
 ## Configuration
-### config/interface.cfg
+### config/interface.cfg in this repository
 ```
 21: dp_comm_ip = <IP address of DP container connected in `brspgw` bridge>
 ...
 23: cp_comm_ip = <IP address of CP container connected in `brspgw` bridge>
 ```
 
-### config/cp\_config.cfg
+### config/cp\_config.cfg in this repository
 ```
 1: S11_SGW_IP=<IP address of CP container connected in `brs11` bridge>
 2: S11_MME_IP=<IP address of traffic container connected in `brs11` bridge>
 3: S1U_SGW_IP=<IP address of DP container connected in `brs1u` bridge>
 ```
 
-### config/dp\_config.cfg
+### config/dp\_config.cfg in this repository
 ```
 1: S1U_IP=<IP address of DP container connected in `brs1u` bridge>
 ...
