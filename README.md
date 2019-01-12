@@ -123,6 +123,7 @@ root# tcpreplay --pps=2000 -i $SGI_IFACE tosend-sgi.pcap # to generate SGI traff
 
 ## Release information
 * Release 1 - single PM version
-* Release 2 - single PM version / multiple ECP sevices (under maintenance by Woojoong Kim @ POSTECH and ONF)
-* Release 3 - multi-PM version by using Docker Swarm (Under maintenance by Woojoong Kim @ POSTECH and ONF)
+* Release 2 - single PM version / multiple EPC sevices (under maintenance by Woojoong Kim @ POSTECH and ONF)
+* Release 3 - multi-PM version / multiple EPC services; each EPC runs in the same PM (TBD)
+* Release 4 - multi-PM version by using Docker Swarm (Not fixed yet)
 
